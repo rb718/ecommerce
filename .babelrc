@@ -1,3 +1,4 @@
 {
-    "preset": ["next/babel"]
+  "presets": ["next/babel"],
+  "plugins": []
 }
