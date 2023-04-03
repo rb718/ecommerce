@@ -86,7 +86,7 @@ const ProductDetails = ({ product, products }) => {
         <h2>You may also like</h2>
         <div className="marquee">
           <div className="maylike-products-container">
-            {products.map((item) => (
+            {products?.map((item) => (
               <Product key={item._id} product={item} />
             ))}
           </div>
@@ -105,7 +105,7 @@ export const getStaticPaths = async () => {
 
   const products = await client.fetch(query);
 
-  const paths = products.map((product) => ({
+  const paths = products?.map((product) => ({
     params: {
       slug: product.slug.current,
     },
